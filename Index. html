@@ -1,0 +1,70 @@
+# Lover-messg-<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>هيثم</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      background: red;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background: red;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -50px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 50px;
+      top: 0;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: rotate(-45deg) scale(1);
+      }
+      50% {
+        transform: rotate(-45deg) scale(1.2);
+      }
+    }
+
+    .name {
+      margin-top: 30px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #ff4d4d;
+      text-shadow: 0 0 10px #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <div class="name">هيثم</div>
+</body>
+</html>
